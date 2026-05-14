@@ -17,39 +17,39 @@ export default function Publications() {
   const articles = [
     {
       id: 1,
-      title: "Log 01: Data, Källkritik & Osäkerhet",
-      date: "Data-analys",
-      excerpt: "Att begära ut och omvandla osäker regional hälsodata till publika underlag. Tydlig redovisning av metodbegränsningar och brister i materialet."
+      title: "Signal Before Structure",
+      date: "Log 01",
+      excerpt: "Innan något kan organiseras behöver någon hitta vad som faktiskt betyder något."
     },
     {
       id: 2,
-      title: "Log 02: Kris, Risk & Samordning",
-      date: "Riskhantering",
-      excerpt: "Beroendelogik i praktiken. Från nationell intensivvårdssamordning till uppföljning av trygghetsrutiner och incidentprocesser i skolan."
+      title: "Reality Moves",
+      date: "Log 02",
+      excerpt: "Planen håller aldrig helt. Arbetet behöver tåla nya besked, brutna antaganden och människor som ändrar förutsättningarna."
     },
     {
       id: 3,
-      title: "Log 03: Offentlig Styrning",
-      date: "Processförståelse",
-      excerpt: "Arbete nära politisk beslutskedja. Revisionskritik, ansvarsfrihet och tillitsbaserad välfärdsstyrning – en strukturell kartläggning av hur beslut fattas."
+      title: "The Work Behind the Output",
+      date: "Log 03",
+      excerpt: "350+ publicerade leveranser är inte en siffra om innehåll. Det är spår av planering, omdöme, prioritering och genomförande."
     },
     {
       id: 4,
-      title: "Log 04: Intressenter & Simulering",
-      date: "Scenarioplanering",
-      excerpt: "Att samordna motstridiga intressen. Utbildningssimuleringar där ekonomiska, miljömässiga och samhälleliga konsekvenser vägs mot varandra."
+      title: "Systems Have People in Them",
+      date: "Log 04",
+      excerpt: "Tekniska flöden fungerar bara när människorna runt dem förstår ansvar, information och nästa steg."
     },
     {
       id: 5,
-      title: "Log 05: Flerformatsleverans under Press",
-      date: "Produktion",
-      excerpt: "350+ publiceringar. Evidens för att självständigt hantera hela kedjan: från otydligt uppdrag och informationsinhämtning till färdig paketering."
+      title: "From Noise to Next Step",
+      date: "Log 05",
+      excerpt: "Bra arbete handlar ofta om att göra nästa steg tydligt innan allt är perfekt utrett."
     },
     {
       id: 6,
-      title: "Log 06: Teknisk Översättning",
-      date: "Digitalisering",
-      excerpt: "Att göra AI begripligt för rätt målgrupp. Ett spår som kombinerar teoretisk kommunikation med praktiska interna experiment inom RAG och automationsflöden."
+      title: "Built in the Mess",
+      date: "Log 06",
+      excerpt: "Det mesta värdefulla arbetet sker innan någon har gett det ett snyggt namn."
     }
   ];
 

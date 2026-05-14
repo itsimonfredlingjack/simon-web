@@ -38,7 +38,7 @@ export default function Home() {
       <section className="hero-section">
         <h1 className="hero-title">The Blueprint of Work Nobody Sees</h1>
         <p className="hero-subtitle">
-          Verksamhetsnära projektstöd i skärningen mellan IT, människor och genomförande. Med bakgrund från SVT, Trafikverket och akademin hjälper jag digitaliseringsprojekt att gå från oklarhet till tydlig struktur.
+          Människor, information och teknik faller sällan på plats av sig själva. Jag arbetar där uppdrag är otydliga, förutsättningar rör sig och någon behöver skapa struktur nog för att arbetet ska gå framåt.
         </p>
         <div>
           <button className="copper-btn" onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}>
