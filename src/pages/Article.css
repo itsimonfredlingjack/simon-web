@@ -1,0 +1,122 @@
+.article-container {
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  color: var(--text-primary);
+}
+
+.article-progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--bg-secondary);
+  z-index: 1000;
+}
+
+.article-progress-bar {
+  height: 100%;
+  background: var(--accent-copper);
+  width: 0%;
+  transform-origin: 0%;
+}
+
+.article-header {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 8rem 2rem 4rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.article-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+  margin-bottom: 3rem;
+  transition: color 0.3s ease;
+}
+
+.article-back:hover {
+  color: var(--accent-copper);
+}
+
+.article-meta {
+  color: var(--accent-copper);
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+}
+
+.article-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  line-height: 1.1;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.article-lead {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.article-content {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 4rem 2rem 8rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #d1d5db;
+}
+
+.article-content p {
+  margin-bottom: 2rem;
+}
+
+/* Drop cap for first paragraph */
+.article-content p:first-of-type::first-letter {
+  float: left;
+  font-size: 4.5rem;
+  line-height: 0.8;
+  padding-top: 0.2rem;
+  padding-right: 0.5rem;
+  color: var(--accent-copper);
+  font-weight: 600;
+}
+
+.article-content h2 {
+  font-family: var(--font-sans);
+  font-size: 1.5rem;
+  color: #fff;
+  margin-top: 3.5rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.article-content blockquote {
+  border-left: 4px solid var(--accent-copper);
+  padding-left: 2rem;
+  margin: 3rem 0;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #fff;
+}
+
+.article-footer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+}
