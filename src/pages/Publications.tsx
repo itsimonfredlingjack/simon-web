@@ -17,39 +17,39 @@ export default function Publications() {
   const articles = [
     {
       id: 1,
-      title: "Log 01: Operativ Informationshantering",
-      date: "Trafikverket",
-      excerpt: "Lärdomar från minutoperativa informationsflöden. Att styra information mellan resenärer och personal när sekunder räknas."
+      title: "Log 01: Data, Källkritik & Osäkerhet",
+      date: "Data-analys",
+      excerpt: "Att begära ut och omvandla osäker regional hälsodata till publika underlag. Tydlig redovisning av metodbegränsningar och brister i materialet."
     },
     {
       id: 2,
-      title: "Log 02: 350+ Publiceringar",
-      date: "SVT & GU",
-      excerpt: "Från lös idé till färdig produktion. En arkitektur för innehåll, research och deadlinestyrd leverans."
+      title: "Log 02: Kris, Risk & Samordning",
+      date: "Riskhantering",
+      excerpt: "Beroendelogik i praktiken. Från nationell intensivvårdssamordning till uppföljning av trygghetsrutiner och incidentprocesser i skolan."
     },
     {
       id: 3,
-      title: "Log 03: Att Förstå AI och Verksamhet",
-      date: "Göteborgs universitet",
-      excerpt: "Hur man gör komplex forskning om AI i utbildning begriplig för rätt målgrupp utan att tappa djupet."
+      title: "Log 03: Offentlig Styrning",
+      date: "Processförståelse",
+      excerpt: "Arbete nära politisk beslutskedja. Revisionskritik, ansvarsfrihet och tillitsbaserad välfärdsstyrning – en strukturell kartläggning av hur beslut fattas."
     },
     {
       id: 4,
-      title: "Log 04: RAG & Dokumentflöden",
-      date: "Automationsprojekt",
-      excerpt: "Mina egna tekniska projekt. Att bygga system för att förstå mekaniken bakom AI-drivna dokumentflöden."
+      title: "Log 04: Intressenter & Simulering",
+      date: "Scenarioplanering",
+      excerpt: "Att samordna motstridiga intressen. Utbildningssimuleringar där ekonomiska, miljömässiga och samhälleliga konsekvenser vägs mot varandra."
     },
     {
       id: 5,
-      title: "Log 05: Fältarbete & Agilitet",
-      date: "SVT Fältproduktion",
-      excerpt: "Förmågan att snabbt ställa om planen, hitta nya vinklar och säkra leverans när verkligheten inte matchar kartan."
+      title: "Log 05: Flerformatsleverans under Press",
+      date: "Produktion",
+      excerpt: "350+ publiceringar. Evidens för att självständigt hantera hela kedjan: från otydligt uppdrag och informationsinhämtning till färdig paketering."
     },
     {
       id: 6,
-      title: "Log 06: Informationsarkitektur",
-      date: "Struktur",
-      excerpt: "Att ta ostrukturerad data, isolerade dokument och spridda beslut och skapa en röd tråd för genomförande."
+      title: "Log 06: Teknisk Översättning",
+      date: "Digitalisering",
+      excerpt: "Att göra AI begripligt för rätt målgrupp. Ett spår som kombinerar teoretisk kommunikation med praktiska interna experiment inom RAG och automationsflöden."
     }
   ];
 
@@ -58,7 +58,7 @@ export default function Publications() {
       <div style={{ padding: '0 4rem', marginBottom: '4rem', maxWidth: '1000px' }}>
         <h1 className="hero-title" style={{ fontSize: '3rem', marginBottom: '1rem' }}>Fältanteckningar</h1>
         <p className="hero-subtitle" style={{ color: 'var(--text-secondary)' }}>
-          Under min tid på SVT och Göteborgs universitet har jag producerat över 350 publiceringar – från tunga forskningsartiklar till snabba nyhetsformat. Det är inte bara texter, det är 350 kvitton på förmågan att starta, driva och avsluta projekt. Att gräva fram fakta, verifiera, paketera och publicera. Här samlar jag principer och lärdomar från skärningen mellan informationsflöden och teknik.
+          Det här arkivet bygger på över 350 publiceringar och operativa produktioner. De ska inte läsas som en ren journalistisk portfolio, utan som en bevisbank för förmågan att samla in information, förstå systemiska samband, värdera risker och genomföra leveranser i miljöer där flera intressenters krav möts.
         </p>
       </div>
 

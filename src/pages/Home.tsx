@@ -38,7 +38,7 @@ export default function Home() {
       <section className="hero-section">
         <h1 className="hero-title">Struktur i komplexitet.</h1>
         <p className="hero-subtitle">
-          Jag bygger bryggor mellan teknik, människor och processer. Med erfarenhet från SVT, Trafikverket och akademin hjälper jag IT- och digitaliseringsprojekt att gå från oklarhet till tydligt genomförande.
+          Verksamhetsnära projektstöd i skärningen mellan IT, människor och genomförande. Med bakgrund från SVT, Trafikverket och akademin hjälper jag digitaliseringsprojekt att gå från oklarhet till tydlig struktur.
         </p>
         <div>
           <button className="copper-btn" onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}>
@@ -50,38 +50,38 @@ export default function Home() {
       <section className="content-block" ref={addToRefs} style={{ marginTop: '10vh' }}>
         <h2>Mellan verksamhet och teknik</h2>
         <p>
-          Jag är varken en renodlad utvecklare eller en traditionell kommunikatör. Jag är projektstöd, LIA-kandidat och organisatör inom IT och digitalisering. 
+          Jag är varken en renodlad utvecklare eller en traditionell kommunikatör. Jag är en analytisk, genomförandeorienterad LIA-kandidat inom IT-projektledning. 
         </p>
         <p>
-          Min styrka är att skapa struktur i komplexa situationer, förstå både människor och system, hantera information och dokumentera tydligt. Jag förstår teknik tillräckligt väl för att vara den kritiska översättaren mellan verksamhetens behov och teknikens möjligheter.
+          Min styrka är att snabbt sätta mig in i komplexa verksamheter, prata med flera aktörer, värdera information och leverera ett tydligt underlag. Jag förstår teknik tillräckligt väl för att vara den kritiska översättaren mellan verksamhetens behov och IT-sidans leverans.
         </p>
       </section>
 
       <section className="content-block" ref={addToRefs} style={{ marginLeft: 'auto', marginRight: '4rem', marginTop: '20vh' }}>
-        <h2>Princip 01: Operativ informationshantering</h2>
+        <h2>Princip 01: Informationsvärdering & Syntes</h2>
         <p>
-          Att hantera information när det brinner. På Trafikverket arbetade jag i intensiva, operativa informationsflöden där korrekt och blixtsnabb kommunikation behövde samordnas mellan resenärer, tågpersonal, tågklarerare och interna funktioner. Det handlar om rätt detalj, till rätt person, i exakt rätt tid.
+          Att begära ut, värdera och strukturera osäker data under press. Min bakgrund har tränat mig i att hantera metodbegränsningar och datakritik – och att sedan kunna koka ner det till kärnan. Oavsett om det handlar om covid-siffror, otydliga källor eller systemkrav, säkerställer jag att vi agerar på rätt underlag.
         </p>
       </section>
 
       <section className="content-block" ref={addToRefs} style={{ marginTop: '20vh' }}>
-        <h2>Princip 02: Från idé till leverans</h2>
+        <h2>Princip 02: Kris, Risk & Samordning</h2>
         <p>
-          Självständigt fältarbete under deadline på SVT. Det bygger på förmågan att snabbt förstå ett helt nytt ämne, hitta rätt människor och leverera ett färdigt resultat – oavsett om förutsättningarna ändras under resans gång och kartan måste ritas om.
+          Att hantera beroendelogik och resursfördelning när det är skarpt läge. Från att bevaka regionens larm om vårdbelastning till att granska skolors trygghetsåtgärder efter incidenter. Jag rör mig vant i miljöer där risker ska identifieras, processer ska kartläggas och felaktiga antaganden får konsekvenser.
         </p>
       </section>
 
       <section className="content-block" ref={addToRefs} style={{ marginLeft: 'auto', marginRight: '4rem', marginTop: '20vh' }}>
-        <h2>Princip 03: Översättning mellan domäner</h2>
+        <h2>Princip 03: Intressentkontakt i Ekosystem</h2>
         <p>
-          Att göra det komplexa begripligt. På Göteborgs universitet arbetade jag med att ta tung forskning inom AI, elektrifiering, management och hållbarhet och översätta det till format som skapar värde i digitala kanaler. Det handlar om att förstå mottagaren lika väl som det tekniska ämnet.
+          Att bygga broar mellan olika världar. I mitt arbete med bland annat klimat-simuleringar (En-ROADS) och partnernätverk har jag sett vikten av att förstå många olika intressenters behov. Jag driver inte bara min egen linje, utan samordnar perspektiv – oavsett om det är studenter, företag, chefer eller tekniker.
         </p>
       </section>
       
       <section className="content-block" ref={addToRefs} style={{ marginTop: '20vh', marginBottom: '30vh' }}>
-        <h2>Princip 04: Teknisk förståelse i praktiken</h2>
+        <h2>Princip 04: Den Teknisk Bryggan</h2>
         <p>
-          Jag kodar inte nästa stora SaaS-tjänst från grunden, men jag bygger egna AI-verktyg för att förstå mekaniken. Genom egna automationsprojekt, RAG (Retrieval-Augmented Generation) och skript för dokumentflöden skapar jag den tekniska grundförståelse som krävs för att arbeta hands-on i IT-projekt.
+          Jag kodar inte nästa stora SaaS-tjänst, men jag testar och bygger egna AI-verktyg för att förstå mekaniken. Genom egna projekt med RAG-modeller och automatiserade dokumentflöden skapar jag den tekniska grundförståelse som gör att jag kan diskutera systemimplementationer utan att tappa bort verksamhetsnyttan.
         </p>
       </section>
     </div>
