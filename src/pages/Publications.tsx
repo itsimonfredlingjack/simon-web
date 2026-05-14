@@ -17,35 +17,49 @@ export default function Publications() {
   const articles = [
     {
       id: 1,
-      title: "Digitalisering börjar i röran före verktyget",
-      date: "Oct 2023",
-      excerpt: "När gamla arbetssätt möter nya verktyg uppstår glapp som någon behöver kunna se, formulera och ta vidare."
+      title: "Log 01: Operativ Informationshantering",
+      date: "Trafikverket",
+      excerpt: "Lärdomar från minutoperativa informationsflöden. Att styra information mellan resenärer och personal när sekunder räknas."
     },
     {
       id: 2,
-      title: "Från Fältproduktion till IT-ledning",
-      date: "Jun 2023",
-      excerpt: "Att snabbt förstå en situation, hitta vad som faktiskt är relevant och hantera nya besked under press."
+      title: "Log 02: 350+ Publiceringar",
+      date: "SVT & GU",
+      excerpt: "Från lös idé till färdig produktion. En arkitektur för innehåll, research och deadlinestyrd leverans."
     },
     {
       id: 3,
-      title: "Teknik som Möjliggörare, Inte Lösning",
-      date: "Jan 2023",
-      excerpt: "Nya verktyg blir användbara först när människor förstår varför de behövs och hur de påverkar arbetet."
+      title: "Log 03: Att Förstå AI och Verksamhet",
+      date: "Göteborgs universitet",
+      excerpt: "Hur man gör komplex forskning om AI i utbildning begriplig för rätt målgrupp utan att tappa djupet."
     },
     {
       id: 4,
-      title: "Kommunikation i Genomförandet",
-      date: "Nov 2022",
-      excerpt: "Kommunikation får inte bli en plan som hamnar bredvid projektet. Den behöver vara en del av det."
+      title: "Log 04: RAG & Dokumentflöden",
+      date: "Automationsprojekt",
+      excerpt: "Mina egna tekniska projekt. Att bygga system för att förstå mekaniken bakom AI-drivna dokumentflöden."
+    },
+    {
+      id: 5,
+      title: "Log 05: Fältarbete & Agilitet",
+      date: "SVT Fältproduktion",
+      excerpt: "Förmågan att snabbt ställa om planen, hitta nya vinklar och säkra leverans när verkligheten inte matchar kartan."
+    },
+    {
+      id: 6,
+      title: "Log 06: Informationsarkitektur",
+      date: "Struktur",
+      excerpt: "Att ta ostrukturerad data, isolerade dokument och spridda beslut och skapa en röd tråd för genomförande."
     }
   ];
 
   return (
     <div className="page-content" style={{ minHeight: '100vh' }}>
-      <div style={{ padding: '0 4rem', marginBottom: '2rem' }}>
-        <h1 className="hero-title" style={{ fontSize: '3rem', marginBottom: '1rem' }}>The Archives</h1>
-        <p className="hero-subtitle">Articles, thoughts, and field notes from the intersection of technology and human systems.</p>
+      <div style={{ padding: '0 4rem', marginBottom: '4rem', maxWidth: '1000px' }}>
+        <h1 className="hero-title" style={{ fontSize: '3rem', marginBottom: '1rem' }}>Fältanteckningar</h1>
+        <p className="hero-subtitle" style={{ color: 'var(--text-secondary)' }}>
+          Under min tid på SVT och Göteborgs universitet har jag producerat över 350 publiceringar – från tunga forskningsartiklar till snabba nyhetsformat. Det är inte bara texter, det är 350 kvitton på förmågan att starta, driva och avsluta projekt. Att gräva fram fakta, verifiera, paketera och publicera. Här samlar jag principer och lärdomar från skärningen mellan informationsflöden och teknik.
+        </p>
       </div>
 
       <div className="pub-grid" ref={containerRef}>
@@ -55,7 +69,7 @@ export default function Publications() {
             <h2 className="pub-title">{article.title}</h2>
             <p className="pub-excerpt">{article.excerpt}</p>
             <div style={{ marginTop: '1.5rem' }}>
-              <Link to={`/publications/${article.id}`} className="copper-btn" style={{ padding: '0.25rem 1rem', fontSize: '0.75rem', display: 'inline-block' }}>Read</Link>
+              <Link to={`/publications/${article.id}`} className="copper-btn" style={{ padding: '0.25rem 1rem', fontSize: '0.75rem', display: 'inline-block' }}>Läs logg</Link>
             </div>
           </article>
         ))}

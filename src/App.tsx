@@ -16,11 +16,10 @@ function Navigation() {
       {!isArticleView && (
         <div className="nav-links">
           <Link to="/" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}>The Blueprint</Link>
-          <Link to="/publications" className={`nav-link ${location.pathname === '/publications' ? 'active' : ''}`}>Publications</Link>
-          <a href="#contact" className="nav-link">Contact</a>
+          <Link to="/publications" className={`nav-link ${location.pathname === '/publications' ? 'active' : ''}`}>Fältanteckningar</Link>
         </div>
       )}
-      {!isArticleView && <button className="copper-btn">Request Demo</button>}
+      {!isArticleView && <a href="mailto:hello@example.com" className="copper-btn">Starta Dialog</a>}
     </nav>
   );
 }
