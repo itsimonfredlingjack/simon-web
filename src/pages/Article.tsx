@@ -73,14 +73,14 @@ export default function Article() {
           {note.whatThisShows}
         </p>
         
-        <h2>Evidens & Konkreta Bevis</h2>
+        <h2>Situation & Genomförande</h2>
         <ul style={{ listStyleType: 'disc', paddingLeft: '1.5rem', marginBottom: '2rem' }}>
           {note.evidencePoints.map((point, i) => (
             <li key={i} style={{ marginBottom: '0.5rem' }}>{point}</li>
           ))}
         </ul>
 
-        <h2>Avgränsning</h2>
+        <h2>Min roll & Avgränsning</h2>
         <ul style={{ listStyleType: 'circle', paddingLeft: '1.5rem', marginBottom: '2rem', color: 'var(--text-secondary)' }}>
           {note.notClaiming.map((claim, i) => (
             <li key={i} style={{ marginBottom: '0.5rem' }}>{claim}</li>
@@ -89,7 +89,7 @@ export default function Article() {
 
         <div style={{ marginTop: '4rem', padding: '2rem', background: 'rgba(255,255,255,0.03)', borderLeft: '4px solid var(--copper)' }}>
           <h3 style={{ marginTop: 0, fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--text-secondary)' }}>
-            Källinformation
+            Verifierat arbetsprov
           </h3>
           <p style={{ margin: '0.5rem 0', fontWeight: 500 }}>{note.sourcePublication}</p>
           {note.exactCredit && (

@@ -19,10 +19,10 @@ export type FieldNote = {
 };
 
 export const proofMetrics: ProofMetric[] = [
-  { value: "350+", label: "publiceringar/krediter", qualifier: "avrundat från verifierat register och kompletterande SVT-sökning" },
-  { value: "332", label: "original-URL:er i huvudregistret", qualifier: "hittade och markerade som originalkälla" },
-  { value: "55", label: "nya SVT-fynd", qualifier: "säkra kompletterande publiceringar/krediter" },
-  { value: "2018-2022", label: "SVT-tyngdpunkt", qualifier: "främst SVT Nyheter Jönköping, med äldre lokala SVT-spår" }
+  { value: "350+", label: "Verifierade leveranser", qualifier: "Dokumenterad publiceringsvolym från huvudregister och SVT-sökning" },
+  { value: "332", label: "Källbelagda produktioner", qualifier: "Spårbara original-URL:er i huvudregistret" },
+  { value: "55", label: "Kompletterande uppdrag", qualifier: "Säkrade SVT-publiceringar utanför primärt arkiv" },
+  { value: "2018-2022", label: "Huvudsaklig period", qualifier: "Operativ tyngdpunkt vid SVT Nyheter Jönköping" }
 ];
 
 export const fieldNotes: FieldNote[] = [
