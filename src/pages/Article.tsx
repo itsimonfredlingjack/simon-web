@@ -80,7 +80,7 @@ export default function Article() {
           ))}
         </ul>
 
-        <h2>Min roll & Avgränsning</h2>
+        <h2>Vad källan styrker & Avgränsning</h2>
         <ul style={{ listStyleType: 'circle', paddingLeft: '1.5rem', marginBottom: '2rem', color: 'var(--text-secondary)' }}>
           {note.notClaiming.map((claim, i) => (
             <li key={i} style={{ marginBottom: '0.5rem' }}>{claim}</li>

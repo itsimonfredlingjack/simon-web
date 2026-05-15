@@ -50,7 +50,7 @@ export default function Home() {
             marginBottom: '1rem',
             fontWeight: 500
           }}>
-            Ett källbelagt urval av publiceringar och arbetsprov från SVT, byggt på verifierade originalkällor snarare än lös CV-text.
+            Ett källbelagt urval av publiceringar och arbetsprov från SVT, byggt på verifierade originalkällor.
           </p>
           <div style={{ 
             display: 'flex', 

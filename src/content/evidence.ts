@@ -19,9 +19,9 @@ export type FieldNote = {
 };
 
 export const proofMetrics: ProofMetric[] = [
-  { value: "350+", label: "Verifierade leveranser", qualifier: "Dokumenterad publiceringsvolym från huvudregister och SVT-sökning" },
-  { value: "332", label: "Källbelagda produktioner", qualifier: "Spårbara original-URL:er i huvudregistret" },
-  { value: "55", label: "Kompletterande uppdrag", qualifier: "Säkrade SVT-publiceringar utanför primärt arkiv" },
+  { value: "350+", label: "Verifierade publiceringar och krediter", qualifier: "Dokumenterad volym från huvudregister och kompletterande sökning" },
+  { value: "332", label: "Källbelagda arbetsprov", qualifier: "Spårbara original-URL:er i huvudregistret" },
+  { value: "55", label: "Ytterligare SVT-fynd", qualifier: "Säkrade publiceringar utanför primärt arkiv" },
   { value: "2018-2022", label: "Huvudsaklig period", qualifier: "Operativ tyngdpunkt vid SVT Nyheter Jönköping" }
 ];
 
@@ -35,16 +35,15 @@ export const fieldNotes: FieldNote[] = [
     sourcePublication: "Sveriges Television / SVT Nyheter Jönköping",
     sourceUrl: "https://www.svt.se/nyheter/lokalt/jonkoping/i-ingatorp-testade-sig-allra-flest-for-covid-19",
     exactCredit: "By Simon Fredling",
-    whatThisShows: "Ett källbelagt exempel på att hantera osäker regional hälsodata och omvandla den till publika underlag. Visar förmågan att tydligt redovisa metodbegränsningar, brister i materialet och lokal relevans under nyhetspress.",
+    whatThisShows: "Ett källbelagt exempel på att hantera osäker regional hälsodata och omvandla den till publika underlag under nyhetspress.",
     evidencePoints: [
-      "Lokal testningsdata för covid-19",
-      "Geografiskt mönster och jämförelse",
-      "Inramning i allmänhetens intresse snarare än sluten analys"
+      "Situation: Bristfällig och regionalt spridd hälsodata behövde sammanställas för allmänheten.",
+      "Arbete: Begärde ut data, analyserade geografiska mönster och identifierade nyckelavvikelser.",
+      "Förmåga: Att snabbt omvandla rådata till tydlig information och redovisa brister i materialet."
     ],
     notClaiming: [
-      "Inget ägandeskap över den underliggande datan",
-      "Ingen epidemiologisk expertis",
-      "Inget policy-ansvar"
+      "Källan styrker förmågan att analysera och publicera data från myndigheter.",
+      "Avgränsning: Visar inte på egen epidemiologisk expertis eller ägandeskap av den underliggande datan."
     ]
   },
   {
@@ -56,16 +55,15 @@ export const fieldNotes: FieldNote[] = [
     sourcePublication: "Sveriges Television / SVT Nyheter Jönköping",
     sourceUrl: "https://www.svt.se/nyheter/lokalt/jonkoping/krislagesavtal-racker-inte-region-jonkoping-anvander-nationell-larmyta",
     exactCredit: "By Simon Fredling",
-    whatThisShows: "Hantering av brådskande information från offentliga institutioner under tryck. Visar förmågan att förklara kapacitetsbrist i sjukvården, offentlig kommunikation och att göra komplexa operativa situationer begripliga.",
+    whatThisShows: "Hantering av brådskande information från offentliga institutioner. Visar förmågan att göra komplexa operativa krislägen begripliga.",
     evidencePoints: [
-      "Regional vårdbelastning",
-      "Kontext för krislägesavtal och nationell larmyta",
-      "Kommunikation från offentlig aktör under press"
+      "Situation: Regionen hamnade under extrem vårdbelastning och larmade nationellt.",
+      "Arbete: Kartlade kapacitetsbrister, samordningsbehov och krislägesavtalets praktiska innebörd.",
+      "Förmåga: Att orientera sig i komplexa beroendekedjor under tidspress och rapportera sakligt kring krisberedskap."
     ],
     notClaiming: [
-      "Inget operativt ansvar inom regionen",
-      "Inget ledarskap inom krishantering",
-      "Ingen medicinsk expertis"
+      "Källan styrker förmågan att förstå och sammanfatta institutionell krishantering.",
+      "Avgränsning: Visar inte på operativt ansvar för vårdens styrning eller ledarskap i krisen."
     ]
   },
   {
@@ -75,17 +73,15 @@ export const fieldNotes: FieldNote[] = [
     subtitle: "Informationsarkitektur & Dubblettkontroll",
     publicationDate: "2026-05-14",
     sourcePublication: "Eget källpaket baserat på Muck Rack och SVT-sökning",
-    whatThisShows: "Strukturerad datainsamling, forskningsautomation och källdisciplin. Visar förmågan att ta stökiga offentliga spår och omvandla dem till ett verifierbart bevisregister, inklusive dedublikering.",
+    whatThisShows: "Forskningsautomation och källdisciplin. Visar förmågan att ta stökiga offentliga spår och omvandla dem till ett verifierbart bevisregister.",
     evidencePoints: [
-      "Huvudregister med 335 rader varav 332 med hittad original-URL",
-      "Kompletterande SVT-sökning hittade 55 säkra nya publiceringar/krediter",
-      "15 redan kända eller sannolika dubbletter uteslöts och dokumenterades",
-      "1 osäker kandidat hanterades med reservation"
+      "Situation: Ett behov av att konsolidera 350+ spridda publiceringar till en spårbar helhet.",
+      "Arbete: Strukturerade datautdrag, automatiserade deduplicering och verifierade original-URL:er för varje post.",
+      "Förmåga: Informationsarkitektur och förmågan att bygga kvalitetssäkrade underlag från ostrukturerad data."
     ],
     notClaiming: [
-      "Presenteras inte som en extern publicering",
-      "Publicerar inte rådataregistret som publikt arkiv",
-      "Påstår inte att osäkra kandidater är bekräftade"
+      "Källan styrker förmågan att arbeta systematiskt med stora mängder data och referenshantering.",
+      "Avgränsning: Materialet presenteras inte som en officiell extern publicering eller en absolut komplett lista."
     ]
   },
   {
@@ -97,16 +93,15 @@ export const fieldNotes: FieldNote[] = [
     sourcePublication: "Sveriges Television / SVT Nyheter Jönköping",
     sourceUrl: "https://www.svt.se/nyheter/lokalt/jonkoping/sa-arbetar-brinellgymnasiet-efter-knivskarningen",
     exactCredit: "By Simon Fredling",
-    whatThisShows: "Att kartlägga en organisations respons efter en allvarlig incident. Belyser skolans riskhantering, interna åtgärder och mänskliga konsekvenser i en komplex struktur.",
+    whatThisShows: "Kartläggning av en organisations respons efter en allvarlig incident. Belyser riskhantering och interna åtgärder.",
     evidencePoints: [
-      "Skolkontext efter våldshändelse",
-      "Organisatorisk respons och åtgärder",
-      "Rapportering i allmänhetens intresse utan personlig dramatisering"
+      "Situation: En skola behövde hantera efterspelet av en allvarlig våldshändelse.",
+      "Arbete: Dokumenterade skolans interna åtgärder, rutiner för trygghet och organisatoriska anpassningar.",
+      "Förmåga: Att kartlägga processer och lyfta systemperspektivet över personlig dramatik."
     ],
     notClaiming: [
-      "Inget ansvar för skolans respons",
-      "Ingen expertis inom skolsäkerhet",
-      "Ingen sensationalisering av händelsen"
+      "Källan styrker förmågan att förklara institutionell incidentuppföljning och rutinhantering.",
+      "Avgränsning: Visar inte på operativt ansvar för skolsäkerhet eller krisledning."
     ]
   },
   {
@@ -118,16 +113,15 @@ export const fieldNotes: FieldNote[] = [
     sourcePublication: "Sveriges Television / SVT Nyheter Jönköping",
     sourceUrl: "https://www.svt.se/nyheter/lokalt/jonkoping/polisen-efter-kritiken-om-tafsardagen-vi-skulle-gatt-ut-med-detta-pa-ett-annat-satt",
     exactCredit: "By Simon Fredling",
-    whatThisShows: "Hantering av källosäkerhet och offentlig riskkommunikation. Visar hur man följer upp myndigheters kommunikation när det faktiska källunderlaget är omtvistat.",
+    whatThisShows: "Hantering av källosäkerhet och riskkommunikation. Följer upp myndigheters kommunikation när underlaget är omtvistat.",
     evidencePoints: [
-      "Hantering av explicit källosäkerhet",
-      "Polisens kommunikation efter kritik",
-      "Kontext för offentlig rättelse och förtydligande"
+      "Situation: Ett händelseförlopp rapporterades där själva källgrunden i efterhand ifrågasattes.",
+      "Arbete: Följde upp hur polisen hanterade osäkerheten och den efterföljande kritiken.",
+      "Förmåga: Att granska informationsflöden och beskriva hur institutioner kommunicerar vid otydlighet."
     ],
     notClaiming: [
-      "Gör inga generella anspråk om polisarbete",
-      "Påstår ingen absolut sanning om den underliggande händelsen",
-      "Presenteras inte som krisledning"
+      "Källan styrker förmågan att hantera offentlig riskkommunikation och brister i informationsöverföring.",
+      "Avgränsning: Visar inte på egen expertis i polisarbete och gör inga utredande anspråk om händelsen."
     ]
   },
   {
@@ -139,16 +133,15 @@ export const fieldNotes: FieldNote[] = [
     sourcePublication: "Sveriges Television / SVT Nyheter Jönköping",
     sourceUrl: "https://www.svt.se/nyheter/lokalt/jonkoping/sa-slog-operation-kura-till-mot-flera-gym",
     exactCredit: "By Simon Fredling",
-    whatThisShows: "Fältarbete i realtid. Exempel på att hantera och strukturera händelseutveckling nära myndighetsingripanden, och göra en konkret sekvens av händelser logisk och begriplig.",
+    whatThisShows: "Exempel på att hantera händelseutveckling nära myndighetsingripanden och göra ett förlopp logiskt och begripligt.",
     evidencePoints: [
-      "Kontext kring polisoperation",
-      "Flera platser och samordnade tillslag",
-      "Händelsedriven rapportering med operativ detaljrikedom"
+      "Situation: En polisiär insats genomfördes samtidigt över flera platser.",
+      "Arbete: Samordnade information i realtid, verifierade uppgifter från fältet och strukturerade ett snabbt förlopp.",
+      "Förmåga: Agilitet, fältorientering och förmågan att logiskt strukturera operativ händelseinformation."
     ],
     notClaiming: [
-      "Ingen inblandning i polisens operation",
-      "Ingen utredande auktoritet",
-      "Överdriver inte tillgången bortom den publicerade rapporteringen"
+      "Källan styrker förmågan att följa och dokumentera snabba, operativa förlopp.",
+      "Avgränsning: Visar inte på någon utredande myndighetsroll eller inblandning i operationen."
     ]
   }
 ];
