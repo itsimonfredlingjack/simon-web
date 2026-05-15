@@ -1,8 +1,9 @@
 import { useEffect, useRef } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react';
+import { Link, useParams, Navigate } from 'react-router-dom';
+import { ArrowLeft, ExternalLink } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { fieldNotes } from '../content/evidence';
 import './Article.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -13,7 +14,11 @@ export default function Article() {
   const contentRef = useRef<HTMLDivElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
 
+  const note = fieldNotes.find(n => n.id === id);
+
   useEffect(() => {
+    if (!note) return;
+
     // Scroll To Top on mount
     window.scrollTo(0, 0);
 
@@ -39,10 +44,12 @@ export default function Article() {
         }
       });
     }
-  }, []);
+  }, [note]);
 
-  // In a real app, you'd fetch the article based on `id`
-  // Here we use static content for the prototype
+  if (!note) {
+    return <Navigate to="/publications" replace />;
+  }
+
   return (
     <div className="article-container">
       <div className="article-progress-container">
@@ -52,48 +59,58 @@ export default function Article() {
       <header className="article-header" ref={headerRef}>
         <Link to="/publications" className="article-back">
           <ArrowLeft size={16} />
-          Back to Archives
+          Tillbaka till arkivet
         </Link>
-        <div className="article-meta">Field Notes • Oct 2023</div>
-        <h1 className="article-title">Digitalisering börjar i röran före verktyget</h1>
+        <div className="article-meta">{note.logLabel} • {note.publicationDate}</div>
+        <h1 className="article-title">{note.title}</h1>
         <p className="article-lead">
-          När gamla arbetssätt möter nya verktyg uppstår glapp som någon behöver kunna se, formulera och ta vidare. Det handlar inte om mjukvaran, det handlar om människorna som använder den.
+          {note.subtitle}
         </p>
       </header>
 
       <main className="article-content" ref={contentRef}>
         <p>
-          I uppgifter som ändras, dokument som behöver hållas aktuella, information som borde hänga ihop men lever i olika system, och beslut som behöver fattas medan verkligheten fortsätter att röra sig — det är den typen av miljöer jag kommer ifrån.
-        </p>
-        <p>
-          Jag började i journalistiken, med fältproduktion på SVT. Där handlar arbetet om att snabbt förstå en situation, hitta vad som faktiskt är relevant, prata med rätt människor, hantera nya besked och få ihop en leverans som håller. Ibland på en dag. Ibland över längre tid. Ofta med flera parallella delar som måste röra sig samtidigt.
+          {note.whatThisShows}
         </p>
         
-        <h2>Informationens Fragmentering</h2>
-        <p>
-          När information är splittrad blir arbetet långsamt. När ansvar är otydligt fastnar frågor mellan människor, dokument och system.
-        </p>
-        
-        <blockquote>
-          "Nya verktyg blir användbara först när människor förstår varför de behövs, hur de påverkar arbetet och vad som krävs för att de ska fungera i vardagen."
-        </blockquote>
+        <h2>Evidens & Konkreta Bevis</h2>
+        <ul style={{ listStyleType: 'disc', paddingLeft: '1.5rem', marginBottom: '2rem' }}>
+          {note.evidencePoints.map((point, i) => (
+            <li key={i} style={{ marginBottom: '0.5rem' }}>{point}</li>
+          ))}
+        </ul>
 
-        <p>
-          Mitt teknikintresse har dragit mig längre in i de frågorna. Jag utvecklar egna lösningar med automation och AI för att förstå vad som faktiskt går att göra med dagens verktyg: hur återkommande arbete kan avlastas, hur information kan bli lättare att använda och hur kvalitet, säkerhet och personuppgifter behöver hanteras från början.
-        </p>
+        <h2>Avgränsning</h2>
+        <ul style={{ listStyleType: 'circle', paddingLeft: '1.5rem', marginBottom: '2rem', color: 'var(--text-secondary)' }}>
+          {note.notClaiming.map((claim, i) => (
+            <li key={i} style={{ marginBottom: '0.5rem' }}>{claim}</li>
+          ))}
+        </ul>
 
-        <h2>Skärningspunkten</h2>
-        <p>
-          Men ny teknik är inte ensamt lösningen på verksamheters nutida utmaningar. Kommunikation får därför inte bli en plan som hamnar bredvid projektet. Den behöver vara en del av genomförandet.
-        </p>
-        <p>
-          Min riktning finns i skärningen mellan verksamhet, teknik och genomförande: att förstå behoven, strukturera informationen, se vad tekniken faktiskt kan avlasta och bidra till att nya arbetssätt fungerar i praktiken.
-        </p>
+        <div style={{ marginTop: '4rem', padding: '2rem', background: 'rgba(255,255,255,0.03)', borderLeft: '4px solid var(--copper)' }}>
+          <h3 style={{ marginTop: 0, fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--text-secondary)' }}>
+            Källinformation
+          </h3>
+          <p style={{ margin: '0.5rem 0', fontWeight: 500 }}>{note.sourcePublication}</p>
+          {note.exactCredit && (
+            <p style={{ margin: '0.5rem 0', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Kreditering: {note.exactCredit}</p>
+          )}
+          {note.sourceUrl && (
+            <a 
+              href={note.sourceUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginTop: '1rem', color: 'var(--copper)', textDecoration: 'none', fontSize: '0.9rem', fontFamily: 'var(--font-sans)' }}
+            >
+              Verifiera originalkälla <ExternalLink size={14} />
+            </a>
+          )}
+        </div>
       </main>
 
       <footer className="article-footer">
         <Link to="/publications" className="copper-btn" style={{ padding: '1rem 3rem' }}>
-          Return to Archives
+          Tillbaka till arkivet
         </Link>
       </footer>
     </div>

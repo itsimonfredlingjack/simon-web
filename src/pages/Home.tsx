@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { proofMetrics } from '../content/evidence';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -40,6 +41,41 @@ export default function Home() {
         <p className="hero-subtitle">
           Människor, information och teknik faller sällan på plats av sig själva. Jag arbetar där uppdrag är otydliga, förutsättningar rör sig och någon behöver skapa struktur nog för att arbetet ska gå framåt.
         </p>
+        <div style={{ marginTop: '3rem', marginBottom: '3rem' }}>
+          <p style={{ 
+            color: 'var(--copper)', 
+            fontSize: '0.85rem', 
+            textTransform: 'uppercase', 
+            letterSpacing: '0.05em',
+            marginBottom: '1rem',
+            fontWeight: 500
+          }}>
+            Ett källbelagt urval av publiceringar och arbetsprov från SVT, byggt på verifierade originalkällor snarare än lös CV-text.
+          </p>
+          <div style={{ 
+            display: 'flex', 
+            flexWrap: 'wrap', 
+            gap: '2rem',
+            borderTop: '1px solid rgba(255,255,255,0.1)',
+            borderBottom: '1px solid rgba(255,255,255,0.1)',
+            padding: '1.5rem 0'
+          }}>
+            {proofMetrics.map((metric, i) => (
+              <div key={i} style={{ flex: '1 1 200px' }}>
+                <div style={{ fontSize: '2rem', fontWeight: 300, color: 'var(--text-primary)', marginBottom: '0.25rem' }}>
+                  {metric.value}
+                </div>
+                <div style={{ fontSize: '0.85rem', color: 'var(--copper)', marginBottom: '0.25rem' }}>
+                  {metric.label}
+                </div>
+                <div style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}>
+                  {metric.qualifier}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div>
           <button className="copper-btn" onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}>
             Utforska systemet
