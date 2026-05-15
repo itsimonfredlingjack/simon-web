@@ -63,7 +63,7 @@ export default function Home() {
           }}>
             {proofMetrics.map((metric, i) => (
               <div key={i} style={{ flex: '1 1 200px' }}>
-                <div style={{ fontSize: '2rem', fontWeight: 300, color: 'var(--text-primary)', marginBottom: '0.25rem' }}>
+                <div style={{ fontSize: '2rem', fontWeight: 400, color: 'var(--text-primary)', marginBottom: '0.25rem', fontFamily: 'var(--font-mono)' }}>
                   {metric.link ? (
                     <Link to={metric.link} style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid var(--copper)' }}>
                       {metric.value}
@@ -136,7 +136,7 @@ export default function Home() {
                 height: 'auto',
                 aspectRatio: '1/1',
                 objectFit: 'cover',
-                filter: 'grayscale(100%) contrast(1.1)', // Gör bilden svartvit för att passa blueprint-temat (kan tas bort)
+                filter: 'grayscale(30%) contrast(1.05)',
                 border: '1px solid rgba(255,255,255,0.1)',
                 display: 'block',
                 position: 'relative',
@@ -152,7 +152,9 @@ export default function Home() {
               fontSize: '0.7rem',
               letterSpacing: '0.1em',
               textTransform: 'uppercase',
-              color: 'var(--text-secondary)',
+              color: 'var(--accent-copper)',
+              fontFamily: 'var(--font-mono)',
+              opacity: 0.6,
               zIndex: 3
             }}>
               ID: SF-2026
@@ -161,29 +163,29 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="content-block" ref={addToRefs} style={{ marginLeft: 'auto', marginRight: '4rem', marginTop: '20vh' }}>
+      <section className="content-block" ref={addToRefs} style={{ marginLeft: 'auto', marginRight: '4rem', marginTop: '8vh' }}>
         <h2>Princip 01: Informationsvärdering & Syntes</h2>
         <p>
           Att begära ut, värdera och strukturera osäker data under press. Min bakgrund har tränat mig i att hantera metodbegränsningar och datakritik – och att sedan kunna koka ner det till kärnan. Oavsett om det handlar om covid-siffror, otydliga källor eller systemkrav, säkerställer jag att vi agerar på rätt underlag.
         </p>
       </section>
 
-      <section className="content-block" ref={addToRefs} style={{ marginTop: '20vh' }}>
+      <section className="content-block" ref={addToRefs} style={{ marginTop: '8vh' }}>
         <h2>Princip 02: Kris, Risk & Samordning</h2>
         <p>
           Att hantera beroendelogik och resursfördelning när det är skarpt läge. Från att bevaka regionens larm om vårdbelastning till att granska skolors trygghetsåtgärder efter incidenter. Jag rör mig vant i miljöer där risker ska identifieras, processer ska kartläggas och felaktiga antaganden får konsekvenser.
         </p>
       </section>
 
-      <section className="content-block" ref={addToRefs} style={{ marginLeft: 'auto', marginRight: '4rem', marginTop: '20vh' }}>
+      <section className="content-block" ref={addToRefs} style={{ marginLeft: 'auto', marginRight: '4rem', marginTop: '8vh' }}>
         <h2>Princip 03: Intressentkontakt i Ekosystem</h2>
         <p>
           Att bygga broar mellan olika världar. I mitt arbete med bland annat klimat-simuleringar (En-ROADS) och partnernätverk har jag sett vikten av att förstå många olika intressenters behov. Jag driver inte bara min egen linje, utan samordnar perspektiv – oavsett om det är studenter, företag, chefer eller tekniker.
         </p>
       </section>
       
-      <section className="content-block" ref={addToRefs} style={{ marginTop: '20vh', marginBottom: '30vh' }}>
-        <h2>Princip 04: Den Teknisk Bryggan</h2>
+      <section className="content-block" ref={addToRefs} style={{ marginTop: '8vh', marginBottom: '15vh' }}>
+        <h2>Princip 04: Den Tekniska Bryggan</h2>
         <p>
           Jag kodar inte nästa stora SaaS-tjänst, men jag testar och bygger egna AI-verktyg för att förstå mekaniken. Genom egna projekt med RAG-modeller och automatiserade dokumentflöden skapar jag den tekniska grundförståelse som gör att jag kan diskutera systemimplementationer utan att tappa bort verksamhetsnyttan.
         </p>

@@ -31,7 +31,7 @@ export default function Publications() {
             <h2 className="pub-title">{note.title}</h2>
             <p className="pub-excerpt">{note.whatThisShows}</p>
             <div style={{ marginTop: '1.5rem' }}>
-              <Link to={`/publications/${note.id}`} className="copper-btn" style={{ padding: '0.25rem 1rem', fontSize: '0.75rem', display: 'inline-block' }}>Läs logg</Link>
+              <Link to={`/publications/${note.id}`} className="copper-btn" style={{ padding: '0.25rem 1rem', fontSize: '0.75rem', display: 'inline-block' }}>Läs logg →</Link>
             </div>
           </article>
         ))}
