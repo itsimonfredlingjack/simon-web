@@ -2,13 +2,14 @@ import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react
 import Home from './pages/Home';
 import Publications from './pages/Publications';
 import Article from './pages/Article';
+import Register from './pages/Register';
 import BlueprintBackground from './components/BlueprintBackground';
 
 function Navigation() {
   const location = useLocation();
   
   // Hide main nav links on article reading view to minimize distraction
-  const isArticleView = location.pathname.startsWith('/publications/');
+  const isArticleView = location.pathname.startsWith('/publications/') || location.pathname === '/register';
 
   return (
     <nav className="navbar" style={{ background: isArticleView ? 'transparent' : undefined, padding: isArticleView ? '1.5rem 2rem' : undefined }}>
@@ -26,7 +27,7 @@ function Navigation() {
 
 function MainLayout() {
   const location = useLocation();
-  const isArticleView = location.pathname.startsWith('/publications/');
+  const isArticleView = location.pathname.startsWith('/publications/') || location.pathname === '/register';
 
   return (
     <div className="app-container">
@@ -38,6 +39,7 @@ function MainLayout() {
         <Route path="/" element={<Home />} />
         <Route path="/publications" element={<Publications />} />
         <Route path="/publications/:id" element={<Article />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </div>
   );

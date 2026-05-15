@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { proofMetrics } from '../content/evidence';
@@ -50,7 +51,7 @@ export default function Home() {
             marginBottom: '1rem',
             fontWeight: 500
           }}>
-            Ett källbelagt urval av publiceringar och arbetsprov från SVT, byggt på verifierade originalkällor.
+            Ett urval av professionella uppdrag och publiceringar, spårade till originalkälla.
           </p>
           <div style={{ 
             display: 'flex', 
@@ -63,7 +64,13 @@ export default function Home() {
             {proofMetrics.map((metric, i) => (
               <div key={i} style={{ flex: '1 1 200px' }}>
                 <div style={{ fontSize: '2rem', fontWeight: 300, color: 'var(--text-primary)', marginBottom: '0.25rem' }}>
-                  {metric.value}
+                  {metric.link ? (
+                    <Link to={metric.link} style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid var(--copper)' }}>
+                      {metric.value}
+                    </Link>
+                  ) : (
+                    metric.value
+                  )}
                 </div>
                 <div style={{ fontSize: '0.85rem', color: 'var(--copper)', marginBottom: '0.25rem' }}>
                   {metric.label}

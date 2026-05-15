@@ -2,6 +2,7 @@ export type ProofMetric = {
   value: string;
   label: string;
   qualifier: string;
+  link?: string;
 };
 
 export type FieldNote = {
@@ -19,10 +20,9 @@ export type FieldNote = {
 };
 
 export const proofMetrics: ProofMetric[] = [
-  { value: "350+", label: "Verifierade publiceringar och krediter", qualifier: "Dokumenterad volym från huvudregister och kompletterande sökning" },
-  { value: "332", label: "Källbelagda arbetsprov", qualifier: "Spårbara original-URL:er i huvudregistret" },
-  { value: "55", label: "Ytterligare SVT-fynd", qualifier: "Säkrade publiceringar utanför primärt arkiv" },
-  { value: "2018-2022", label: "Huvudsaklig period", qualifier: "Operativ tyngdpunkt vid SVT Nyheter Jönköping" }
+  { value: "350+", label: "Publiceringar", qualifier: "med Simon Fredling i byline" },
+  { value: "332", label: "Verifierade originalpubliceringar", qualifier: "spårade till originalkälla, främst SVT" },
+  { value: "Publiceringslista", label: "Rubriker, datum och källor", qualifier: "se hela registret", link: "/register" }
 ];
 
 export const fieldNotes: FieldNote[] = [
