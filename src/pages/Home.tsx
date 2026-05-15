@@ -90,14 +90,75 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="content-block" ref={addToRefs} style={{ marginTop: '10vh' }}>
-        <h2>Mellan verksamhet och teknik</h2>
-        <p>
-          Jag är varken en renodlad utvecklare eller en traditionell kommunikatör. Jag är en analytisk, genomförandeorienterad LIA-kandidat inom IT-projektledning. 
-        </p>
-        <p>
-          Min styrka är att snabbt sätta mig in i komplexa verksamheter, prata med flera aktörer, värdera information och leverera ett tydligt underlag. Jag förstår teknik tillräckligt väl för att vara den kritiska översättaren mellan verksamhetens behov och IT-sidans leverans.
-        </p>
+      <section className="content-block" ref={addToRefs} style={{ marginTop: '10vh', maxWidth: '1000px' }}>
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+          gap: '4rem',
+          alignItems: 'center'
+        }}>
+          <div>
+            <h2>Mellan verksamhet och teknik</h2>
+            <p>
+              Jag är varken en renodlad utvecklare eller en traditionell kommunikatör. Jag är en analytisk, genomförandeorienterad LIA-kandidat inom IT-projektledning. 
+            </p>
+            <p>
+              Min styrka är att snabbt sätta mig in i komplexa verksamheter, prata med flera aktörer, värdera information och leverera ett tydligt underlag. Jag förstår teknik tillräckligt väl för att vara den kritiska översättaren mellan verksamhetens behov och IT-sidans leverans.
+            </p>
+          </div>
+          <div style={{ position: 'relative' }}>
+            {/* Dekorativ ram i blueprint-stil */}
+            <div style={{
+              position: 'absolute',
+              top: '-10px',
+              left: '-10px',
+              width: '40px',
+              height: '40px',
+              borderTop: '1px solid var(--copper)',
+              borderLeft: '1px solid var(--copper)',
+              zIndex: 1
+            }}></div>
+            <div style={{
+              position: 'absolute',
+              bottom: '-10px',
+              right: '-10px',
+              width: '40px',
+              height: '40px',
+              borderBottom: '1px solid var(--copper)',
+              borderRight: '1px solid var(--copper)',
+              zIndex: 1
+            }}></div>
+            <img 
+              src="/simon.jpg" 
+              alt="Simon Fredling Jack" 
+              style={{
+                width: '100%',
+                height: 'auto',
+                aspectRatio: '1/1',
+                objectFit: 'cover',
+                filter: 'grayscale(100%) contrast(1.1)', // Gör bilden svartvit för att passa blueprint-temat (kan tas bort)
+                border: '1px solid rgba(255,255,255,0.1)',
+                display: 'block',
+                position: 'relative',
+                zIndex: 2
+              }} 
+            />
+            <div style={{
+              position: 'absolute',
+              bottom: '1rem',
+              left: '-2rem',
+              transform: 'rotate(-90deg)',
+              transformOrigin: 'bottom left',
+              fontSize: '0.7rem',
+              letterSpacing: '0.1em',
+              textTransform: 'uppercase',
+              color: 'var(--text-secondary)',
+              zIndex: 3
+            }}>
+              ID: SF-2026
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className="content-block" ref={addToRefs} style={{ marginLeft: 'auto', marginRight: '4rem', marginTop: '20vh' }}>
