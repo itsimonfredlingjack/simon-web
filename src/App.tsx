@@ -9,7 +9,7 @@ function Navigation() {
   const location = useLocation();
   
   // Hide main nav links on article reading view to minimize distraction
-  const isArticleView = location.pathname.startsWith('/publications/') || location.pathname === '/register';
+  const isArticleView = location.pathname.startsWith('/publications/');
 
   return (
     <nav className="navbar" style={{ background: isArticleView ? 'transparent' : undefined, padding: isArticleView ? '1.5rem 2rem' : undefined }}>
@@ -18,6 +18,7 @@ function Navigation() {
         <div className="nav-links">
           <Link to="/" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}>The Blueprint</Link>
           <Link to="/publications" className={`nav-link ${location.pathname === '/publications' ? 'active' : ''}`}>Fältanteckningar</Link>
+          <Link to="/register" className={`nav-link ${location.pathname === '/register' ? 'active' : ''}`}>Publiceringslista</Link>
         </div>
       )}
       {!isArticleView && <a href="mailto:hello@example.com" className="copper-btn">Starta Dialog</a>}
@@ -27,7 +28,7 @@ function Navigation() {
 
 function MainLayout() {
   const location = useLocation();
-  const isArticleView = location.pathname.startsWith('/publications/') || location.pathname === '/register';
+  const isArticleView = location.pathname.startsWith('/publications/');
 
   return (
     <div className="app-container">

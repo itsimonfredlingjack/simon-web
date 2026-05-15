@@ -21,8 +21,7 @@ export type FieldNote = {
 
 export const proofMetrics: ProofMetric[] = [
   { value: "350+", label: "Publiceringar", qualifier: "med Simon Fredling i byline" },
-  { value: "332", label: "Verifierade originalpubliceringar", qualifier: "spårade till originalkälla, främst SVT" },
-  { value: "Publiceringslista", label: "Rubriker, datum och källor", qualifier: "se hela registret", link: "/register" }
+  { value: "332", label: "Verifierade originalpubliceringar", qualifier: "spårade till originalkälla, främst SVT" }
 ];
 
 export const fieldNotes: FieldNote[] = [
