@@ -4,10 +4,12 @@
   --text-primary: #e2e8f0;
   --text-secondary: #94a3b8;
   --accent-copper: #c87941;
+  --copper: var(--accent-copper);
   --accent-copper-glow: rgba(200, 121, 65, 0.2);
   --border-color: #2a313a;
   
   --font-sans: 'Inter', sans-serif;
+  --font-mono: 'Fira Code', monospace;
 }
 
 * {
@@ -196,9 +198,30 @@ a {
 .pub-card {
   background: var(--bg-secondary);
   border: 1px solid var(--border-color);
-  padding: 2rem;
-  transition: all 0.3s ease;
+  padding: 2.5rem 2rem;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
+  overflow: hidden;
+}
+
+/* Subtile background grid inside card */
+.pub-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.5;
+  z-index: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Ensure content stays above background */
+.pub-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .pub-card::after {
@@ -211,13 +234,19 @@ a {
   background: var(--accent-copper);
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 2;
 }
 
 .pub-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--accent-copper);
-  box-shadow: 0 10px 30px var(--accent-copper-glow);
+  transform: translateY(-4px);
+  border-color: rgba(200, 121, 65, 0.4);
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5), 0 0 20px -5px var(--accent-copper-glow);
+  background: rgba(30, 35, 40, 1);
+}
+
+.pub-card:hover::before {
+  opacity: 1;
 }
 
 .pub-card:hover::after {

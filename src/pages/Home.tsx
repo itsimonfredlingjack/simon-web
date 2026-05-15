@@ -98,12 +98,12 @@ export default function Home() {
           alignItems: 'center'
         }}>
           <div>
-            <h2>Mellan verksamhet och teknik</h2>
+            <h2>Om mig</h2>
             <p>
-              Jag är varken en renodlad utvecklare eller en traditionell kommunikatör. Jag är en analytisk, genomförandeorienterad LIA-kandidat inom IT-projektledning. 
+              Jag rör mig mellan verksamhet och teknik. I dag läser jag IT-projektledning och tar med mig en bakgrund från SVT, där arbetet handlade om att snabbt förstå komplexa situationer, prata med rätt personer och göra information användbar.
             </p>
             <p>
-              Min styrka är att snabbt sätta mig in i komplexa verksamheter, prata med flera aktörer, värdera information och leverera ett tydligt underlag. Jag förstår teknik tillräckligt väl för att vara den kritiska översättaren mellan verksamhetens behov och IT-sidans leverans.
+              Det jag söker i LIA är en miljö där den förmågan får bli praktisk projektkraft: strukturera otydliga uppdrag, hålla ihop perspektiv och översätta mellan verksamhetens behov och tekniska leveranser.
             </p>
           </div>
           <div style={{ position: 'relative' }}>
@@ -129,7 +129,7 @@ export default function Home() {
               zIndex: 1
             }}></div>
             <img 
-              src="/simon.jpg" 
+              src="/simon.jpg?v=20260515" 
               alt="Simon Fredling Jack" 
               style={{
                 width: '100%',
